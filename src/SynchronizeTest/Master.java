@@ -7,7 +7,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentLinkedQueue;
 /**
  * 
- * @author zhoushaojun
+ * @author zhoushaojun && lengjing
  *
  */
 public class Master {
