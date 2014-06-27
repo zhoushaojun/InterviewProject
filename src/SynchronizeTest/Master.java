@@ -8,6 +8,7 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 /**
  * 
  * @author zhoushaojun && lengjing
+ *  smart
  *
  */
 public class Master {
