@@ -5,7 +5,11 @@ import java.util.Queue;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentLinkedQueue;
-
+/**
+ * 
+ * @author zhoushaojun
+ *
+ */
 public class Master {
 
 	private ConcurrentLinkedQueue<Object>     workQueue = new ConcurrentLinkedQueue<Object>();
