@@ -7,14 +7,17 @@ public class ChapterSixThree {
 	public static int max = -1;
 	
 	public static void queryCountOfSameNum(int[] dataInner,int start,int end){
-		if(start > end || start < 0 || end < 0) return;
+		if(start >end || start < 0 || end < 0) return;
+		System.out.println(start + " "+end);
 		int mid =(end - start)>>1;
 		mid =  start+ mid;
-		if(min == -1 && dataInner[start] == 3){
+		if( dataInner[start] == 3 && (start < min || min == -1)){
+			System.out.println("start : "+start);
 			min = start;
 			//return;
 		}
-		if(max == -1 && dataInner[end] == 3){
+		if(dataInner[end] == 3 && (end > max || end == -1)){
+			System.out.println("end :"+end);
 			max = end;
 			//return;
 		}
@@ -23,9 +26,25 @@ public class ChapterSixThree {
 		queryCountOfSameNum(dataInner, mid+1, end);
 		}
 	}
+	
+	public static int twoPartQuery(int[] data ,int start, int end ,int val){
+		if(start > end || start <0 || end <0)return -1;
+		int mid = start + (end -start)/2;
+		System.out.println(start+" "+end);
+		if(data[mid] ==  val)return mid;
+		if(data[mid] > val){
+			return  twoPartQuery(data, start, mid-1, val);
+		}else {
+			return twoPartQuery(data, mid+1, end, val);
+		}
+		
+		
+	}
 	public static void main(String[] args) {
-		queryCountOfSameNum(ChapterSixThree.data, 0, ChapterSixThree.data.length-1);
-		System.out.println(min);
-		System.out.println(max);
+//		queryCountOfSameNum(ChapterSixThree.data, 0, ChapterSixThree.data.length-1);
+//		System.out.println(min);
+//		System.out.println(max);
+		int va = twoPartQuery(ChapterSixThree.data, 0, ChapterSixThree.data.length-1, 8);
+		System.out.println(va);
 	}
 }
