@@ -69,7 +69,6 @@ public class ChapterSixThree {
 		
 		if(data[mid] == val) {
 			if(mid -1 >= 0 && data[mid-1]!= val){
-				System.out.println("here");
 				return mid;
 			}else {
 				return findFirstTheSameNum(data, start, mid-1, val);
