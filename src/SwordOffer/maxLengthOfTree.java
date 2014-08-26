@@ -2,6 +2,7 @@ package SwordOffer;
 
 public class maxLengthOfTree {
 	public Tree root = new Tree();
+
 	public maxLengthOfTree() {
 		Tree root1 = new Tree();
 		Tree root2 = new Tree();
@@ -20,29 +21,93 @@ public class maxLengthOfTree {
 		root6.setRightNext(root8);
 		root2.setLeftNext(root7);
 	}
-	public int getLengthOfTree(Tree tree){
-		if(null == tree) return 0;
-		
+
+	/**
+	 * Get the length of the tree
+	 * 
+	 * @param tree
+	 * @return
+	 */
+	public int getLengthOfTree(Tree tree) {
+		if (null == tree)
+			return 0;
+
 		int left = getLengthOfTree(tree.leftNext);
 		int right = getLengthOfTree(tree.getRightNext());
-		
-		if(left == 0 && right == 0) return 1;
-		if(left > right) return left +1;
-		else return right + 1;
+
+		return 1 + (left > right ? left : right);
 	}
+
+	/**
+	 * Judge balance tree According the TreeLength function
+	 * 
+	 * @param args
+	 */
+	public boolean isBalanceTree(Tree root) {
+		if (null == root)
+			return true;
+
+		int left = getLengthOfTree(root.leftNext);
+		int right = getLengthOfTree(root.rightNext);
+
+		if (Math.abs(left - right) > 1)
+			return false;
+
+		return isBalanceTree(root.leftNext) && isBalanceTree(root.rightNext);
+
+	}
+
+	/**
+	 * Judge balance tree According the TreeLength Thinking
+	 * 
+	 * @param args
+	 */
+	public boolean isBalanceTreeThinking(Tree tree) {
+		if(null == tree){
+			return true;
+		}
+		if(isBalanceTreeThinking(tree.leftNext) && isBalanceTreeThinking(tree.rightNext)){
+			int leftDepth = 0;
+			int rightDepth = 0;
+			if(null != tree.leftNext) {
+				leftDepth = tree.leftNext.depth;
+			}
+			if(null != tree.rightNext) {
+				rightDepth = tree.rightNext.depth;
+			}
+			if(Math.abs(leftDepth - rightDepth) <= 1){
+				tree.depth = 1 + (leftDepth > rightDepth ? leftDepth : rightDepth);
+				return true;
+			}
+		}
+		return false; 
+		
+	}
+
 	public static void main(String[] args) {
 		maxLengthOfTree max = new maxLengthOfTree();
-		int result = max.getLengthOfTree(max.root);
+		// int result = max.getLengthOfTree(max.root);
+		//boolean result = max.isBalanceTree(max.root);
+		boolean result = max.isBalanceTreeThinking(max.root);
 		System.out.println(result);
 	}
 }
+
 class Tree {
 	public Tree leftNext = null;
 	public Tree rightNext = null;
 	public String node = null;
+	public int depth ;
+	public Tree() {
+
+	}
 	
-	public Tree(){
-		
+	public int getDepth() {
+		return depth;
+	}
+
+	public void setDepth(int depth) {
+		this.depth = depth;
 	}
 
 	public Tree getLeftNext() {
