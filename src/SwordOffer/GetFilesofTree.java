@@ -15,6 +15,22 @@ public class GetFilesofTree {
 		}
 	}
 	public static void main(String[] args) {
-		GetFilesofTree.getFilesofTree(new File(path),1); 
+		GetFilesofTree.getFilesofTree(new File(path),1);
+		Test test = new Test();
+		System.out.println(test.str);
+		System.out.println(test.num);
+		System.out.println(test.dnum);
+		double kk = 1.4;
+		Double kkdDouble = null;
+		System.out.println(String.valueOf(kk));
+		System.out.println("d "+String.valueOf(kkdDouble).replaceAll("null", ""));
 	}
 }
+class Test {
+	public String str;
+	public int num;
+	public double dnum;
+	public float kk = 1.3f;
+	
+}
+ 
