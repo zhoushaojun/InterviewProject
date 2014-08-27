@@ -63,31 +63,31 @@ public class maxLengthOfTree {
 	 * @param args
 	 */
 	public boolean isBalanceTreeThinking(Tree tree) {
-		if(null == tree){
+		if (null == tree) {
 			return true;
 		}
-		if(isBalanceTreeThinking(tree.leftNext) && isBalanceTreeThinking(tree.rightNext)){
+		if (isBalanceTreeThinking(tree.leftNext) && isBalanceTreeThinking(tree.rightNext)) {
 			int leftDepth = 0;
 			int rightDepth = 0;
-			if(null != tree.leftNext) {
+			if (null != tree.leftNext) {
 				leftDepth = tree.leftNext.depth;
 			}
-			if(null != tree.rightNext) {
+			if (null != tree.rightNext) {
 				rightDepth = tree.rightNext.depth;
 			}
-			if(Math.abs(leftDepth - rightDepth) <= 1){
+			if (Math.abs(leftDepth - rightDepth) <= 1) {
 				tree.depth = 1 + (leftDepth > rightDepth ? leftDepth : rightDepth);
 				return true;
 			}
 		}
-		return false; 
-		
+		return false;
+
 	}
 
 	public static void main(String[] args) {
 		maxLengthOfTree max = new maxLengthOfTree();
 		// int result = max.getLengthOfTree(max.root);
-		//boolean result = max.isBalanceTree(max.root);
+		// boolean result = max.isBalanceTree(max.root);
 		boolean result = max.isBalanceTreeThinking(max.root);
 		System.out.println(result);
 	}
@@ -97,11 +97,12 @@ class Tree {
 	public Tree leftNext = null;
 	public Tree rightNext = null;
 	public String node = null;
-	public int depth ;
+	public int depth;
+
 	public Tree() {
 
 	}
-	
+
 	public int getDepth() {
 		return depth;
 	}
