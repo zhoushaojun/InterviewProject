@@ -45,6 +45,6 @@ public class GetDifferentNumInArray {
 	
 	public static void main(String[] args) {
 		getDifferentNum();
-		//System.out.println(16 >> 0);
+		//System.out.println(16 >> 0);\
 	}
 }
