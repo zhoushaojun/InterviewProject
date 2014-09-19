@@ -80,7 +80,7 @@ public class SortAlgorithms {
 	
 	public void heapSort(int []data){
 		int length = data.length;
-		for(int i = length-1/2;i>=0;i--){
+		for(int i = (length-1)/2;i>=0;i--){
 		    heapAdjust(data, i, data.length);	
 		}
 		for(int i=length-1;i>=0;i--){

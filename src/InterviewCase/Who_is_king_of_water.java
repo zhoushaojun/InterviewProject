@@ -1,7 +1,7 @@
 package InterviewCase;
 
 public class Who_is_king_of_water {
-    private int[] data = {1,7,7,7,7,2,3,2,7,4};
+    private int[] data = {0,1,2,3,2,2,2,5,4,9,7};
     public int getCount(){
     	int tempcount = 1;
     	int tempKing  = data[0];
