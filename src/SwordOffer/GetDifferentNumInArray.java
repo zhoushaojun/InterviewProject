@@ -1,5 +1,10 @@
 package SwordOffer;
-
+/**
+ * 一个数组中 2个数 没有出现2次，其余均出现2次
+ * 求出这两个数
+ * @author zhoushaojun
+ *
+ */
 public class GetDifferentNumInArray {
 
 	private static int[] data = {1,2,2,1,5,6,7,5,6,7,12,13};

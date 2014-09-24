@@ -1,11 +1,18 @@
 package SwordOffer;
 
 import java.util.ArrayList;
-
+/**
+ * (1)查询 在1-n 中 和为Sum的连续序列
+ * @author zhoushaojun
+ *
+ */
 public class GetSpecificSumOfArray {
 
 	private static final int sum = 15;
 
+	/**
+	 * 查询 有序数组中 特定值，自己想的方法不好
+	 */
 	public void findSequenceNum() {
 		int end = sum / 2;
 		if (sum % 2 != 0) {
@@ -87,8 +94,8 @@ public class GetSpecificSumOfArray {
 	}
 
 	public static void main(String[] args) {
-		//GetSpecificSumOfArray ge = new GetSpecificSumOfArray();
-		//ge.findSequenceNum();
-		GetSpecificSumOfArray.findSequenceNum2();
+		GetSpecificSumOfArray ge = new GetSpecificSumOfArray();
+		ge.findSequenceNum();
+		//GetSpecificSumOfArray.findSequenceNum2();
 	}
 }

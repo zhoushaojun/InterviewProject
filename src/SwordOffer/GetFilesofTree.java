@@ -1,7 +1,11 @@
 package SwordOffer;
 
 import java.io.File;
-
+/**
+ * 深度搜索 树 中的文件
+ * @author zhoushaojun
+ *
+ */
 public class GetFilesofTree {
 	private static final String path = "1";
 	public static void getFilesofTree(File file, int length){

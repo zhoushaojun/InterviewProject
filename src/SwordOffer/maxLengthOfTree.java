@@ -1,5 +1,9 @@
 package SwordOffer;
-
+/**
+ * 二叉树的深度 以及 平衡二叉树
+ * @author zhoushaojun
+ *
+ */
 public class maxLengthOfTree {
 	public Tree root = new Tree();
 

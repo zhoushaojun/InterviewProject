@@ -3,6 +3,11 @@ package SwordOffer;
 import java.util.ArrayList;
 
 import org.w3c.dom.NodeList;
+/**
+ * 计算筛子 n个筛子 的 数值和
+ * @author zhoushaojun
+ *
+ */
 
 public class CalculateDice {
 

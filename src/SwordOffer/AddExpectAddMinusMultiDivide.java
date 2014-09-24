@@ -1,5 +1,12 @@
 package SwordOffer;
 
+/**
+ * 禁止使用 四则运算 进行 加法
+ * 抑或 非进位 加法
+ * 与 <<1 提取进位
+ * @author zhoushaojun
+ *
+ */
 public class AddExpectAddMinusMultiDivide {
 	private static int first = 19;
 	private static int second = 6;

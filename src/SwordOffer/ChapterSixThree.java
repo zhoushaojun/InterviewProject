@@ -1,5 +1,9 @@
 package SwordOffer;
-
+/**
+ * 一次性找出 最小 最大 位置
+ * @author zhoushaojun
+ *
+ */
 public class ChapterSixThree {
 	
 	public static int[] data = {1,3,3,3,3,3,4,5,6,7,8};
