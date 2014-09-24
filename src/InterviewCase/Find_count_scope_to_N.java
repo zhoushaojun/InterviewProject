@@ -1,5 +1,9 @@
 package InterviewCase;
-
+/**
+ *  1-n 中所有数字中 包含1的数目
+ * @author zhoushaojun
+ *
+ */
 public class Find_count_scope_to_N {
 
 	private int num = 21;

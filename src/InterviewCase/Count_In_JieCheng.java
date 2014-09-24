@@ -1,5 +1,9 @@
 package InterviewCase;
-
+/**
+ * ½×³ËÖĞ Ä©Î²ÁãÊıÄ¿
+ * @author zhoushaojun
+ *
+ */
 public class Count_In_JieCheng {
 
 	  private int num = 4;

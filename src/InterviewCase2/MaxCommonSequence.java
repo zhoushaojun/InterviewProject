@@ -1,5 +1,9 @@
 package InterviewCase2;
-
+/**
+ * 公共子序列
+ * @author zhoushaojun
+ *
+ */
 public class MaxCommonSequence {
 
     private char[] first  = {'a','b','c','d','e','f','x','y'};

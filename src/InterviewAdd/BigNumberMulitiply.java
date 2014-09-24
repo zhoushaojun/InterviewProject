@@ -1,5 +1,9 @@
 package InterviewAdd;
-
+/**
+ * ´óÊıÏà³Ë
+ * @author zhoushaojun
+ *
+ */
 public class BigNumberMulitiply {
 	
 	private int bigNumber = 5;

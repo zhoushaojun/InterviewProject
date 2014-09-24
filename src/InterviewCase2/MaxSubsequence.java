@@ -1,5 +1,10 @@
 package InterviewCase2;
-
+/**
+ * 数组的子数组之和最大值
+ * 最大递增子序列，连续子序列的和值最大
+ * @author zhoushaojun
+ *
+ */
 public class MaxSubsequence {
    
 	private int[] data = {1,2,-3,4,-4};

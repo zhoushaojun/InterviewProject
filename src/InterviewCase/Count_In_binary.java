@@ -1,5 +1,9 @@
 package InterviewCase;
-
+/**
+ * 二进制中 1 的数目
+ * @author zhoushaojun
+ *
+ */
 public class Count_In_binary {
 
 	 private int num = 22;

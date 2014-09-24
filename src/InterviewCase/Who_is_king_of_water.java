@@ -1,5 +1,9 @@
 package InterviewCase;
-
+/**
+ * 查找数组中水王，数量超过一半的数值
+ * @author zhoushaojun
+ *
+ */
 public class Who_is_king_of_water {
     private int[] data = {0,1,2,3,2,2,2,5,4,9,7};
     public int getCount(){

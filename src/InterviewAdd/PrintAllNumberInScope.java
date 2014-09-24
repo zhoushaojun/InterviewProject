@@ -1,5 +1,9 @@
 package InterviewAdd;
-
+/**
+ * 打印1-n 所有数字
+ * @author zhoushaojun
+ *
+ */
 public class PrintAllNumberInScope {
 	
 	public void printTheWholeNumber(){

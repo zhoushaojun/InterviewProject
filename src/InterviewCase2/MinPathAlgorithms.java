@@ -1,7 +1,11 @@
 package InterviewCase2;
 
 import java.util.ArrayList;
-
+/**
+ * ×î¶ÌÂ·¾¶
+ * @author zhoushaojun
+ *
+ */
 public class MinPathAlgorithms {
 
 	private int[][] data = new int[][]{

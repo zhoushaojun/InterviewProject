@@ -1,7 +1,11 @@
 package InterviewCase2;
 
 import java.util.ArrayList;
-
+/**
+ * 最小生成树
+ * @author zhoushaojun
+ *
+ */
 public class MinTree {
 
 	private int[][] data = {
