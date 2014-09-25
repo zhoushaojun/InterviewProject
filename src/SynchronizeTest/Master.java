@@ -60,6 +60,8 @@ public class Master {
 		 * 		  then it will show result and quit
 		 */
 		while(result.size() >0 || !master.isCompleted()){
+			if(result.size() != 0)
+			System.out.println("leng "+ result.size());
 			Set<String> keys = result.keySet();
 			String key = null;
 			for (String string : keys) {
