@@ -35,7 +35,8 @@ class TreeNodeU {
 	private String value;
 	private TreeNodeU left;
 	private TreeNodeU right;
-	
+	private TreeNodeU nextNode;
+	private TreeNodeU frontNode;
 	public TreeNodeU(String str) {
 		this.value = str;
 	}
@@ -63,4 +64,21 @@ class TreeNodeU {
 	public void setRight(TreeNodeU right) {
 		this.right = right;
 	}
+
+	public TreeNodeU getNextNode() {
+		return nextNode;
+	}
+
+	public void setNextNode(TreeNodeU nextNode) {
+		this.nextNode = nextNode;
+	}
+
+	public TreeNodeU getFrontNode() {
+		return frontNode;
+	}
+
+	public void setFrontNode(TreeNodeU frontNode) {
+		this.frontNode = frontNode;
+	}
+	
 }
