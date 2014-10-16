@@ -8,6 +8,10 @@ package SwordOffer;
  * 
  * @author zhoushaojun
  *
+ *	全排列 是一个API，很多问题求多少种排列方法的都可以用到全排列。
+ *  比如：A.8宫格皇后问题，不在同一行同一列以及同一对角线。
+ *  	可以写出一种方法，然后全排列。最后检测 左右对角线，是否存在>=2的元素。
+ *  	B.8个数字是否构成正方体，全部排列。然后对条件进行检测。
  */
 public class AllSortOfArray {
 	public static String[] data = {"a","b","c"};
