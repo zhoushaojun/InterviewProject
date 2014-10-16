@@ -2,9 +2,8 @@ package SwordOffer;
 
 public class TreeUtil {
 	
-	private TreeNodeU root = null;
-	
-	public TreeUtil() {
+	private  static TreeNodeU root = null;
+	static{
 		root = new TreeNodeU("1");
 		TreeNodeU two = new TreeNodeU("2");
 		TreeNodeU three = new TreeNodeU("3");
@@ -24,8 +23,11 @@ public class TreeUtil {
 		TreeNodeU eight = new TreeNodeU("8");
 		four.setLeft(eight);
 	}
+	public TreeUtil() {
+		
+	}
 
-	public TreeNodeU getRoot() {
+	public static TreeNodeU getRoot() {
 		return root;
 	}
 }
