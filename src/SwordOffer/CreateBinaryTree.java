@@ -5,7 +5,7 @@ package SwordOffer;
  * @author zhoushaojun
  *
  */
-public class createBinaryTree {
+public class CreateBinaryTree {
 
 	private static int[] front = { 1, 2, 4, 7, 5, 3, 6 };
 
