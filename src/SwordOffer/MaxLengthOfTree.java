@@ -4,10 +4,10 @@ package SwordOffer;
  * @author zhoushaojun
  *
  */
-public class maxLengthOfTree {
+public class MaxLengthOfTree {
 	public Tree root = new Tree();
 
-	public maxLengthOfTree() {
+	public MaxLengthOfTree() {
 		Tree root1 = new Tree();
 		Tree root2 = new Tree();
 		root.setLeftNext(root1);
@@ -89,7 +89,7 @@ public class maxLengthOfTree {
 	}
 
 	public static void main(String[] args) {
-		maxLengthOfTree max = new maxLengthOfTree();
+		MaxLengthOfTree max = new MaxLengthOfTree();
 		// int result = max.getLengthOfTree(max.root);
 		// boolean result = max.isBalanceTree(max.root);
 		boolean result = max.isBalanceTreeThinking(max.root);
