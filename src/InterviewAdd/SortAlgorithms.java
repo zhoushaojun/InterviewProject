@@ -3,8 +3,6 @@ package InterviewAdd;
 /**
  * ÅÅÐò·½·¨»ã×Ü
  */
-import java.net.Inet4Address;
-
 public class SortAlgorithms {
 
 	public int[] data = { 1, 5, 47, 87, 56, 24, 8, 2, 34, 7, 5, 8, 9 };
