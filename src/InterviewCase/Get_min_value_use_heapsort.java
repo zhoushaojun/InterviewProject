@@ -79,10 +79,11 @@ public class Get_min_value_use_heapsort {
 		// }
 
 	}
+
 	/**
-	 * Index 为 交换后的 序列号，左子树 或者 右子树。
-	 * 目标需要 将左子树 右子树 同时加入到数组中。 
-	 * 将Index/2 再进行 Index*2+1 Index*2+2 放入数组中
+	 * Index 为 交换后的 序列号，左子树 或者 右子树。 目标需要 将左子树 右子树 同时加入到数组中。 将Index/2 再进行
+	 * Index*2+1 Index*2+2 放入数组中
+	 * 
 	 * @param index
 	 * @param length
 	 * @param change
