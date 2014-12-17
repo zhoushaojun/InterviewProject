@@ -7,7 +7,12 @@ import java.lang.reflect.Method;
 import java.nio.IntBuffer;
 import java.nio.MappedByteBuffer;
 import java.nio.channels.FileChannel;
-
+/**
+ * （1） 随机访问类 的 读写测试
+ * （2） 内存映射的读写测试
+ * @author zhoushaojun
+ *
+ */
 public class RandAccessTest {
 	public static void write() {
 		RandomAccessFile raf = null;
@@ -16,15 +21,15 @@ public class RandAccessTest {
 			raf = new RandomAccessFile("D:\\raf.dat", "rw");
 			// 写入数据。 可直接操作指定基本数据类型的对象。
 			raf.writeInt(10);
-			raf.writeInt(Integer.MAX_VALUE);
-			// raf.writeChars("zhou绍钧");
+			//raf.writeInt(Integer.MAX_VALUE);
+			 raf.writeUTF("zho周");
 			// raf.writeChars("leng竟 的d");
 			// raf.writeChars("java");
 			// raf.writeChars("hello world");
 			// raf.writeBytes("java hello");
 
 			// raf.writeBytes("where are you");
-			raf.writeInt(22);
+			//raf.writeInt(22);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
@@ -47,14 +52,13 @@ public class RandAccessTest {
 			raf = new RandomAccessFile("D:\\raf.dat", "r");
 			// 文件只读模式，写入操作将抛异常
 			// raf.write("datou".getBytes());
-
 			// 可直接操作指针，灵活的访问内容
 			// int value = raf.readInt();
 			// System.out.println(value);
-			raf.seek(4);
+			raf.readInt();
 			byte b[] = new byte[10];
-			raf.read(b);
-			// System.out.println(new String(b));
+			String content = raf.readUTF();
+			System.out.println(content);
 		} catch (IOException e) {
 			e.printStackTrace();
 		} finally {
@@ -120,8 +124,8 @@ public class RandAccessTest {
 	}
 	@SuppressWarnings("unchecked")
 	public static void main(String[] args) throws  Exception{
-		// RandAccessTest.write();
-		// RandAccessTest.read();
+		 //RandAccessTest.write();
+		 //RandAccessTest.read();
 		RandAccessTest.bufferWrite();
 		RandAccessTest.bufferMap();
 	}
