@@ -25,7 +25,7 @@ public class SerializeCase implements Serializable{
 			ObjectInputStream objIn = new ObjectInputStream(inputStream);
 			SerializeCase newcse = (SerializeCase)objIn.readObject();
 			System.out.println(newcse.data);
-			System.out.println(newcse.str);
+			System.out.println(newcse.leng);
 			
 			
 		} catch (Exception e) {

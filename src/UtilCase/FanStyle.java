@@ -1,6 +1,5 @@
 package UtilCase;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 
 public class FanStyle<E> {
@@ -25,6 +24,7 @@ public class FanStyle<E> {
 	}
 	public <T> T[] toArray(T[] arrayT){
 		//return (T[])Arrays.copyOf(element, this.element.length,arrayT.getClass());
+		System.out.println(element.length);
 		System.arraycopy(element, 0,arrayT, 0, element.length);
 		return arrayT;
 	}
@@ -34,7 +34,7 @@ public class FanStyle<E> {
 		fan.addElement("1");
 		fan.addElement("2");
 		fan.addElement("3");
-		String[] wangStrings  = new String[9];
+		String[] wangStrings  = new String[10];
 		System.out.println(fan.toArray(wangStrings)[2]);
 		System.out.println(fan.toString());
 	}

@@ -8,6 +8,7 @@ public class ChangableParameters {
 
 	public static void printf(String value, String... args){
 		System.out.println(args.length);
+		
 		if(null != args){
 			for (String string : args) {
 				System.out.println(string);
