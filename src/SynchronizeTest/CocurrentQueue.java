@@ -36,7 +36,6 @@ public class CocurrentQueue {
 		
 		controller.await();
 		System.out.println("Main over ----");
-		
 	}
 }
 
@@ -70,7 +69,7 @@ class ThreadControl implements Runnable{
 		try {
 			while (true) {
 				//Thread.sleep(2);
-				System.out.println("--check--");
+				//System.out.println("--check--");
 				if (Controller.count != 0)
 					continue;
 				controller.anotify();
@@ -88,7 +87,8 @@ class ThreadControl implements Runnable{
 class Controller {
 	public static int count;
 
-	public static void minus() {
+	// 两个进程同时操作，需要同步限制
+	public static synchronized void minus()  {
 		count--;
 	}
 	public synchronized void await() throws InterruptedException{
