@@ -5,7 +5,9 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.LinkedBlockingDeque;
 /**
- * (1)LinkedBlockingDeque 为阻塞式队列，put/take 模式，当队列满时候put阻塞；同理当队列空时候，take阻塞。
+ * (1)LinkedBlockingDeque 为阻塞式队列，put/take 模式
+ *    当队列满时候put阻塞；
+ *    同理当队列空时候，take阻塞。
  * @author zhoushaojun
  *
  */
