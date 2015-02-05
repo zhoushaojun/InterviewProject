@@ -1,7 +1,12 @@
 package UtilCase;
 
 import java.util.Arrays;
-
+/**
+ * 
+ * @author zhoushaojun
+ *
+ * @param <E>
+ */
 public class FanStyle<E> {
 
 	private transient Object[] element;
