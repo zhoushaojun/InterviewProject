@@ -7,6 +7,6 @@ public class test {
 		
 		System.err.println();
 		System.out.println("1");
-		System.out.println("2");
+		System.out.println("2hh");
 	}
 }
