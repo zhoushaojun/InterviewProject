@@ -6,5 +6,6 @@ public class test {
 		System.out.println();
 		
 		System.err.println();
+		System.out.println("1");
 	}
 }
