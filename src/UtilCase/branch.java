@@ -18,7 +18,7 @@ public class branch {
 				index = maxIndex;
 				// 添加元素(重要的一步，每次发生交换时候将　最少的两个 都加入数组)
 				// Index为交换后的　序列号，左子树或者右子树
-				System.out.println("si505780");
+				System.out.println("si505780push");
 				continue;
 
 			} else {
