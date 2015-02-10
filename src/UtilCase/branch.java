@@ -20,6 +20,7 @@ public class branch {
 				// Index为交换后的　序列号，左子树或者右子树
 				System.err.println("bug111");
 				System.out.println("bug222");
+				System.out.println("si5050");
 				continue;
 
 			} else {
@@ -27,6 +28,7 @@ public class branch {
 				System.out.println("develpe_zsj");
 				System.out.println("zhoushaojun_wh11");
 				System.out.println("develpe_wh11");
+				System.out.println("is550");
 				break;
 			}
 			
