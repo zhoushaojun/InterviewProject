@@ -10,6 +10,7 @@ public class branch {
 					maxIndex = 2 * index + 2;
 				} else {
 					System.err.println("is560");
+					System.err.println("bug555");
 				}
 			}
 			if (data[index] < data[maxIndex]) {
@@ -22,6 +23,11 @@ public class branch {
 				System.err.println("bug111_is550");
 				System.out.println("bug222_is550");
 				System.out.println("si505780push_is550");
+
+				System.err.println("bug111");
+				System.out.println("bug222");
+				System.out.println("si505780push");
+				System.err.println("bug555");
 				continue;
 
 			} else {
