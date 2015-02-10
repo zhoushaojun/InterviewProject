@@ -3,13 +3,14 @@ package UtilCase;
 public class branch {
 	public void adjustHeap(int[] data, int index, int lenghth) {
 		int tempvalue = 0;
+		System.err.println("asadfghjkl");
 		while (2 * index + 1 < lenghth) {
 			int maxIndex = 2 * index + 1;
 			if (2 * index + 2 < lenghth) {
 				if (data[2 * index + 2] > data[2 * index + 1]) {
 					maxIndex = 2 * index + 2;
 				} else {
-					System.err.println("is560");
+					System.err.println("is560..666");
 					System.err.println("bug555");
 				}
 			}
