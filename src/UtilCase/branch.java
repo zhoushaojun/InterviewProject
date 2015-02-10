@@ -9,6 +9,7 @@ public class branch {
 				if (data[2 * index + 2] > data[2 * index + 1]) {
 					maxIndex = 2 * index + 2;
 				} else {
+					System.err.println("bug555");
 				}
 			}
 			if (data[index] < data[maxIndex]) {
@@ -21,6 +22,7 @@ public class branch {
 				System.err.println("bug111");
 				System.out.println("bug222");
 				System.out.println("si505780push");
+				System.err.println("bug555");
 				continue;
 
 			} else {
