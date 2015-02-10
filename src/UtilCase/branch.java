@@ -21,11 +21,12 @@ public class branch {
 				continue;
 
 			} else {
+				System.out.println("zhoushaojun");
 				break;
 			}
-
+			
 		}
-
+				
 	}
 	
 	public static void main(String[] args) {
