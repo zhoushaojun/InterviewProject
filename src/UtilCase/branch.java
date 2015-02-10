@@ -9,6 +9,7 @@ public class branch {
 				if (data[2 * index + 2] > data[2 * index + 1]) {
 					maxIndex = 2 * index + 2;
 				} else {
+					System.err.println("is560");
 				}
 			}
 			if (data[index] < data[maxIndex]) {
