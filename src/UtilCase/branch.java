@@ -28,7 +28,7 @@ public class branch {
 				System.err.println("bug111");
 				System.out.println("bug222");
 				System.out.println("si505780push");
-				System.err.println("bug555");
+				System.err.println("bug555_is550");
 				continue;
 
 			} else {
@@ -38,6 +38,7 @@ public class branch {
 				System.out.println("develpe_wh11");
 				System.out.println("is550_is550is550");
 				System.out.println("13:08");
+				System.out.println("13:09");
 				break;
 			}
 			
