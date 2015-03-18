@@ -1,6 +1,7 @@
 package SynchronizeTest;
 
 import java.util.HashMap;
+import java.util.Random;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -37,7 +38,7 @@ class MyThreadLocal extends ThreadLocal<HashMap<String, String>>{
 		HashMap<String, String> map = super.get();
 		System.out.println("First get");
 		for (int i = 0; i < 5; i++) {
-			map.put(Thread.currentThread().getName()+" "+String.valueOf(i), String.valueOf(i));
+			map.put(Thread.currentThread().getName()+" "+String.valueOf(i), String.valueOf(new Random().nextInt(100)));
 		}
 		super.set(map);
 		return super.get();
