@@ -10,7 +10,7 @@ import java.util.concurrent.Future;
 /**
  * 测试 Executor.execute .submit区别 
  * (1)execute 接受 实现runnable接口 
- *    submit  接受实现callable接口 
+ *    submit  接受实现callable 接口  
  * (2)execute 无法返回线程执行结果 submit 可以接受Future<String> 执行结果
  * (3)execute无法处理异常 submit 在call()方法中抛出异常。在Future.get中捕获异常，进行处理
  * 
