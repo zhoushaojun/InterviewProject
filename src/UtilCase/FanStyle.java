@@ -40,7 +40,7 @@ public class FanStyle<E> {
 		fan.addElement("2");
 		fan.addElement("3");
 		String[] wangStrings  = new String[10];
-		System.out.println(fan.toArray(wangStrings)[2]);
+		System.out.println(fan.toArray(wangStrings)[3]);
 		System.out.println(fan.toString());
 	}
 }

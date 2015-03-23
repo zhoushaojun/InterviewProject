@@ -25,14 +25,18 @@ public class UglyNumber {
 		int min;
 		while (number < lastIndex) {
 			min = getMinValue(data[twoIndex] * 2, data[threeIndex] * 3, data[fiveIndex] * 5);
+			
 			data[number++] = min;
+
 			while (data[twoIndex] * 2 <= min)
 				twoIndex++;
 			while (data[threeIndex] * 3 <= min)
 				threeIndex++;
 			while (data[fiveIndex] * 5 <= min)
 				fiveIndex++;
+			System.out.println(min +" two : "+twoIndex +" three "+threeIndex + " five "+fiveIndex);
 		}
+		printf();
 
 	}
 
