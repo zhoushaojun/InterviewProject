@@ -58,7 +58,7 @@ class callableTask implements Callable<String> {
 
 		// 一个模拟耗时的操作
 		try {
-			Thread.sleep(Integer.valueOf(id) * 4000);
+			//Thread.sleep(Integer.valueOf(id) * 4000);
 			if (id.equals("3")) {
 				throw new Exception();
 			}
