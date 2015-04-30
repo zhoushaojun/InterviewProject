@@ -4,11 +4,11 @@ import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 
-public class MyProxy implements InvocationHandler {
+public class EntityMyProxy implements InvocationHandler {
 	
 	private Object object;
 
-	public MyProxy(Object outer) {
+	public EntityMyProxy(Object outer) {
 		this.object = outer;
 	}
 	
@@ -20,7 +20,7 @@ public class MyProxy implements InvocationHandler {
 	}
 	 public static void main(String[] args) {
 		 EntityInterfaceImpl entity = new EntityInterfaceImpl();
-		 EntityInterface entityInterface = (EntityInterface)Proxy.newProxyInstance(entity.getClass().getClassLoader(), entity.getClass().getInterfaces(), new MyProxy(entity));
+		 EntityInterface entityInterface = (EntityInterface)Proxy.newProxyInstance(entity.getClass().getClassLoader(), entity.getClass().getInterfaces(), new EntityMyProxy(entity));
 		 System.out.println(entityInterface.getInteger());
 	}
 
