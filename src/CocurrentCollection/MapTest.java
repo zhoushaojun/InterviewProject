@@ -3,6 +3,8 @@ package CocurrentCollection;
 import java.util.LinkedHashMap;
 import java.util.Map.Entry;
 import java.util.Set;
+import java.util.concurrent.LinkedBlockingDeque;
+import java.util.concurrent.locks.ReentrantLock;
 
 public class MapTest {
 	private static LinkedHashMap<String, String> lHashMapPut = new LinkedHashMap<String, String>(16,0.75f, false);
@@ -16,7 +18,6 @@ public class MapTest {
 		lHashMapPut.get("1");
 		
 		readMap(lHashMapPut);
-		
 	}
 	
 	
@@ -42,5 +43,8 @@ public class MapTest {
 	public static void main(String[] args) {
 		//lhashmapPutTest();
 		lhashmapReadTest();
+		
+		Object obj = new Long(100);
+		System.out.println(obj.toString());
 	}
 }
