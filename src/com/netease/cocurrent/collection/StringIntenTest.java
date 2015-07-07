@@ -1,4 +1,4 @@
-package com.netease.cocurrentcollection;
+package com.netease.cocurrent.collection;
 
 import java.util.concurrent.locks.ReentrantLock;
 

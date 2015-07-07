@@ -1,4 +1,4 @@
-package com.netease.projecttestutil;
+package com.netease.temp.test;
 
 public interface ParentInterface<T extends FanInterface> {
 
