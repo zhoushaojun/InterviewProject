@@ -1,4 +1,4 @@
-package com.netease.module.programma;
+package com.netease.java.module;
 
 public class Women implements Person {
 	private String age;

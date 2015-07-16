@@ -1,4 +1,4 @@
-package com.netease.module.programma;
+package com.netease.java.module;
 
 public class WomenBuildFactory implements PersonBuildFactory<String> {
 	public Person build(String t) {

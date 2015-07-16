@@ -1,4 +1,4 @@
-package com.netease.module.programma;
+package com.netease.java.module;
 
 public class ManBuildFactory implements PersonBuildFactory<Long>{
 	

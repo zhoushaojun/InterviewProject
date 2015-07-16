@@ -1,4 +1,4 @@
-package com.netease.module.programma;
+package com.netease.java.module;
 
 /**
  * 采用 接口--抽象类--实体类 

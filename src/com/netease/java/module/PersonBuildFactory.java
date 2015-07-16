@@ -1,4 +1,4 @@
-package com.netease.module.programma;
+package com.netease.java.module;
 /**
  * "人"构造器 工厂模式
  * 使用模板T，不同工厂接受不同的参数进行构造

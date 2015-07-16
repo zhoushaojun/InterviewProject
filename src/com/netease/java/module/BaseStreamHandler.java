@@ -1,4 +1,4 @@
-package com.netease.module.programma;
+package com.netease.java.module;
 
 public abstract class BaseStreamHandler <T extends Person> implements StreamHandler<T>{
 
