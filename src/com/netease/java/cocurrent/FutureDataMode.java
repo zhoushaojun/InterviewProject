@@ -21,6 +21,7 @@ public class FutureDataMode {
 		System.out.println("Get Future Data...");
 		System.out.println(futureData.getRealData().getData());
 		System.out.println("Get Future Data End...");
+		service.shutdownNow();
 	}
 	
 	public static void main(String[] args) {
