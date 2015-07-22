@@ -3,8 +3,10 @@ package com.interview.synchronize;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.Future;
 
 /**
@@ -22,6 +24,10 @@ public class ExecutorServiceTest {
 
 	public static void executeCore() {
 		ExecutorService service = Executors.newFixedThreadPool(3);
+		
+		/** SubmitÃ·Ωª Callable Test
+		 * 
+		 * 
 		for (int i = 0; i < 10; i++) {
 			Future<String> fu = service.submit(new callableTask(String.valueOf(i)));
 			result.add(fu);
@@ -38,7 +44,49 @@ public class ExecutorServiceTest {
 				return;
 			}
 		}
+		**/
+		
+		/**
+		 * InvokeAll ≤‚ ‘
+		 */
+		List<CallableTask> callableTasks = new ArrayList<CallableTask>();
+		for (int i = 0; i < 10; i++) {
+			callableTasks.add(new CallableTask(String.valueOf(i)));
+		}
+		List<Future<String>> result = null;
+		try {
+			result = service.invokeAll(callableTasks);
+		} catch (InterruptedException e) {
+			System.out.println("invoke exception");
+			e.printStackTrace();
+		}
+		for (Future<String> future : result) {
+			try {
+				System.out.println(future.get());
+			} catch (Exception e) {
+				System.out.println("get exception");
+				e.printStackTrace();
+			}
+		}
 
+		/**
+		 * InvokeAny
+		 */
+		/**
+		 * for (int i = 0; i < 10; i++) {
+		 *  callableTasks.add(new CallableTask(String.valueOf(i))); 
+		 * } 
+		 * 
+		 * List<Future<String>> result = null;
+		 *  try { 
+		 *  	 String resuString = service.invokeAny(callableTasks);
+		 *		 System.out.println(resuString); 
+		 * } catch (Exception e) {
+		 * 
+		 * 		System.out.println("invoke exception"); e.printStackTrace();
+		 * 
+		 *  }
+		 */
 	}
 
 	public static void main(String[] args) {
@@ -46,10 +94,10 @@ public class ExecutorServiceTest {
 	}
 }
 
-class callableTask implements Callable<String> {
+class CallableTask implements Callable<String> {
 	private String id;
 
-	public callableTask(String id) {
+	public CallableTask(String id) {
 		this.id = id;
 	}
 

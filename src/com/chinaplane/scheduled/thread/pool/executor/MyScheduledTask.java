@@ -21,7 +21,6 @@ public class MyScheduledTask {
 		// scheduled.scheduleAtFixedRate(myRunnable, 10, 5, TimeUnit.SECONDS);
 		scheduled.schedule(myRunnable, 3, TimeUnit.SECONDS);
 		System.out.println(getTimes());
-		
 	}
 
 	public static void main(String[] args) {
