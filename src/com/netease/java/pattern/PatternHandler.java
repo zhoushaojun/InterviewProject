@@ -1,9 +1,13 @@
 package com.netease.java.pattern;
 
+import java.security.GeneralSecurityException;
+import java.security.MessageDigest;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.apache.commons.lang.math.IntRange;
 import org.apache.commons.lang3.StringUtils;
+import org.springside.modules.utils.Exceptions;
 
 public class PatternHandler {
 	public static final Pattern DEFAULT_KEY_TAG_PATTERN = Pattern.compile("\\{(.*?)\\}");
@@ -38,7 +42,30 @@ public class PatternHandler {
 		while(matcher.find()){
 			System.out.println(matcher.group(1));	
 		}
-		
+	    IntRange intRange = new IntRange(0, 752634);
+	    System.out.println(intRange.containsInteger(752635));
+	    
+	    System.out.println(StringUtils.join(new Object[]{"a","b","c"},"#"));
+	}
+	
+	private static byte[] digest(byte[] input, String algorithm, byte[] salt, int iterations) {
+		try {
+			MessageDigest digest = MessageDigest.getInstance(algorithm);
+
+			if (salt != null) {
+				digest.update(salt);
+			}
+
+			byte[] result = digest.digest(input);
+
+			for (int i = 1; i < iterations; ++i) {
+				digest.reset();
+				result = digest.digest(result);
+			}
+			return result;
+		} catch (GeneralSecurityException e) {
+			throw Exceptions.unchecked(e);
+		}
 	}
 	public static void main(String[] args) {
 		testHtml();
