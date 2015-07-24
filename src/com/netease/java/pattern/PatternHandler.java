@@ -3,8 +3,12 @@ package com.netease.java.pattern;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.apache.commons.lang3.StringUtils;
+
 public class PatternHandler {
 	public static final Pattern DEFAULT_KEY_TAG_PATTERN = Pattern.compile("\\{(.*?)\\}");
+	// 匹配 <html></html>之间内容  ^为否的意思
+	public static final Pattern htmlPattern = Pattern.compile("<[^>]+>(.*?)</[^>]+>");
 	
 	/**
 	 *  matcher.find 确定是否存在匹配
@@ -19,15 +23,25 @@ public class PatternHandler {
 		String key = "zhou+shao.jun?leng{wang.zhou}+zhou?{junkai}";
 		Matcher matcher = DEFAULT_KEY_TAG_PATTERN.matcher(key);
 		while(matcher.find()){
-			System.out.println(matcher.groupCount());
-			System.out.println(matcher.group(0));
-			System.out.println(matcher.group());
-			
+			//System.out.println(matcher.groupCount());
+			//System.out.println(matcher.group(0));
 			System.out.println(matcher.group(1));
+			
+			//System.out.println(matcher.group(1));
+		}
+		
+	}
+	
+	public static void testHtml(){
+		String key = "<zhou>bei</zhou><leng>jing</leng>";
+		Matcher matcher = htmlPattern.matcher(key);
+		while(matcher.find()){
+			System.out.println(matcher.group(1));	
 		}
 		
 	}
 	public static void main(String[] args) {
-		test();
+		testHtml();
+		//test();
 	}
 }
