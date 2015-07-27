@@ -9,6 +9,7 @@ import org.apache.commons.lang.math.IntRange;
 import org.apache.commons.lang3.StringUtils;
 import org.springside.modules.utils.Exceptions;
 
+
 public class PatternHandler {
 	public static final Pattern DEFAULT_KEY_TAG_PATTERN = Pattern.compile("\\{(.*?)\\}");
 	// 匹配 <html></html>之间内容  ^为否的意思
@@ -48,27 +49,9 @@ public class PatternHandler {
 	    System.out.println(StringUtils.join(new Object[]{"a","b","c"},"#"));
 	}
 	
-	private static byte[] digest(byte[] input, String algorithm, byte[] salt, int iterations) {
-		try {
-			MessageDigest digest = MessageDigest.getInstance(algorithm);
-
-			if (salt != null) {
-				digest.update(salt);
-			}
-
-			byte[] result = digest.digest(input);
-
-			for (int i = 1; i < iterations; ++i) {
-				digest.reset();
-				result = digest.digest(result);
-			}
-			return result;
-		} catch (GeneralSecurityException e) {
-			throw Exceptions.unchecked(e);
-		}
-	}
 	public static void main(String[] args) {
 		testHtml();
 		//test();
 	}
 }
+
