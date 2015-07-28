@@ -1,4 +1,4 @@
-package com.netease.apache.lang.common;
+package com.netease.apache.common;
 
 import java.util.HashSet;
 

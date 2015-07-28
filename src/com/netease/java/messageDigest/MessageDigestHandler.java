@@ -26,4 +26,7 @@ public class MessageDigestHandler {
 			throw Exceptions.unchecked(e);
 		}
 	}
+	public static void main(String[] args) {
+		System.out.println(digest("zhoushaojun".getBytes(), "sha1", "lengjing".getBytes(), 1024));
+	}
 }
