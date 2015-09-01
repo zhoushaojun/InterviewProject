@@ -11,7 +11,8 @@ import org.springside.modules.utils.Exceptions;
 
 
 public class PatternHandler {
-	public static final Pattern DEFAULT_KEY_TAG_PATTERN = Pattern.compile("\\{(.*?)\\}");
+	//正则表达式()为了提取 gruop 内容，如果想匹配括号 \\(,\\)
+	public static final Pattern DEFAULT_KEY_TAG_PATTERN = Pattern.compile("\\{(\\(.*?\\))\\}");
 	// 匹配 <html></html>之间内容  ^为否的意思
 	public static final Pattern htmlPattern = Pattern.compile("<[^>]+>(.*?)</[^>]+>");
 	
@@ -25,7 +26,7 @@ public class PatternHandler {
 	 *  
 	 */
 	public static void test(){
-		String key = "zhou+shao.jun?leng{wang.zhou}+zhou?{junkai}";
+		String key = "zhou+shao.jun?leng{(wang.zhou)}+zhou?{(junkai)}";
 		Matcher matcher = DEFAULT_KEY_TAG_PATTERN.matcher(key);
 		while(matcher.find()){
 			//System.out.println(matcher.groupCount());
@@ -49,9 +50,39 @@ public class PatternHandler {
 	    System.out.println(StringUtils.join(new Object[]{"a","b","c"},"#"));
 	}
 	
+	public static void testMatchResult(){
+	    String str = "124666154";
+	    Pattern pattern = Pattern.compile("\\w+");
+	    Matcher matcher = pattern.matcher(str);
+	    System.out.println(matcher.matches());
+	    while(matcher.find()){
+            System.out.println(matcher.group());   
+        }
+	}
+	
+	public static void StringUtilTest(){
+	    String str = "1-2-4";
+	    //String[] arrys = StringUtils.split(str, "-|");
+	    String[] arrys = StringUtils.splitByWholeSeparator(str,"");
+	    for (String string : arrys) {
+            System.out.println(string);
+        }
+	    
+	}
+	
 	public static void main(String[] args) {
-		testHtml();
+		//testHtml();
 		//test();
+//		String  result = "";
+//		result = 0 == 0? "1" :"2";
+//		System.out.println(result);
+//		
+//		long size = 0L;
+//		System.out.println(size == 0);
+	    testMatchResult();
+		String str = "1234";
+		System.out.println(str.replaceAll("(\\d)", "\\{1\\}a"));
+
 	}
 }
 

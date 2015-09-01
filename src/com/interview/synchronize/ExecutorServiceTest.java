@@ -17,6 +17,12 @@ import java.util.concurrent.Future;
  * (3)execute无法处理异常 submit 在call()方法中抛出异常。在Future.get中捕获异常，进行处理
  * 
  * @author zhoushaojun
+ * invokeAny()
+ * 返回最先正常完成(without throwing exception)的任务直接结果；
+ * 一旦有任务正常完成或者调用出现异常，线程池都会终止正在运行或等待运行(tasks that have not completed are cancelled)的任务
+ * 
+ * nvokeAll()
+ * 是一个阻塞方法，会等待任务列表中的所有任务都执行完成。不管任务是正常完成，还是异常终止，Future.isDone()始终返回true
  * 
  */
 public class ExecutorServiceTest {

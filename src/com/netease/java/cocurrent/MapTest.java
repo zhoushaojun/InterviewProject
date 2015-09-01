@@ -8,11 +8,15 @@ import java.util.TreeSet;
 import java.util.Map.Entry;
 import java.util.Set;
 import java.util.concurrent.LinkedBlockingDeque;
+import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantLock;
 
 
 
 
+
+
+import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;
@@ -72,5 +76,6 @@ public class MapTest {
 		testGoogleCopyOf();
 		Object obj = new Long(100);
 		System.out.println(obj.toString());
+		ReadWriteLock readWriteLock = new ReentrantReadWriteLock();
 	}
 }
