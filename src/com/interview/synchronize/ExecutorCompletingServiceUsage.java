@@ -14,7 +14,7 @@ import java.util.concurrent.Executors;
  * @author zhoushaojun
  *
  */
-public class ExecutorCompletingService {
+public class ExecutorCompletingServiceUsage {
     private static ExecutorService executorService = Executors.newFixedThreadPool(5);
     private static CompletionService completionService = new ExecutorCompletionService(executorService);
     

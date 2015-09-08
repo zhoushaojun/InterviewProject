@@ -8,6 +8,11 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.Future;
+import java.util.concurrent.LinkedBlockingQueue;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
+
+import org.springframework.scheduling.concurrent.CustomizableThreadFactory;
 
 /**
  * 测试 Executor.execute .submit区别 
@@ -25,9 +30,18 @@ import java.util.concurrent.Future;
  * 是一个阻塞方法，会等待任务列表中的所有任务都执行完成。不管任务是正常完成，还是异常终止，Future.isDone()始终返回true
  * 
  */
-public class ExecutorServiceTest {
+public class ExecutorServiceUsage {
 	private static ArrayList<Future<String>> result = new ArrayList<Future<String>>();
 
+	/**
+	 * 创建线程池
+	 */
+    public static ExecutorService createThreadPool(String threadPoolName) {
+        CustomizableThreadFactory threadFactory = new CustomizableThreadFactory(threadPoolName);
+        // 尽可能多地缓冲，减少对数据库的访问
+        return new ThreadPoolExecutor(10, 20, 60, TimeUnit.SECONDS, new LinkedBlockingQueue<Runnable>(8000), threadFactory,
+                new ThreadPoolExecutor.CallerRunsPolicy());
+    }
 	public static void executeCore() {
 		ExecutorService service = Executors.newFixedThreadPool(3);
 		
