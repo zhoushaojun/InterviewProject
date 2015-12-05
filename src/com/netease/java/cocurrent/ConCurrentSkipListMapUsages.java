@@ -9,6 +9,7 @@ import java.util.TreeMap;
 import java.util.concurrent.ConcurrentSkipListMap;
 import java.util.concurrent.ConcurrentSkipListSet;
 
+import org.apache.commons.lang.math.RandomUtils;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
@@ -44,7 +45,7 @@ public class ConCurrentSkipListMapUsages {
 	public static void usageMap(){
 		
 		PersonUtil p1 = new PersonUtil("zhoushaojun", 28);
-		PersonUtil p2 = new PersonUtil("zhoushaojun111", 28);
+		PersonUtil p2 = new PersonUtil("zhoushaojun2", 24);
 		PersonUtil p3 = new PersonUtil("lengjing", 29);
 		System.out.println(p1.hashCode());
 		System.out.println(p2.hashCode());
@@ -61,22 +62,23 @@ public class ConCurrentSkipListMapUsages {
 		hashMap.put(p2, "22");
 		hashMap.put(p3, "3");
 		
+		System.out.println(hashMap.size());
 		//treeMap.putAll(hashMap);
-		Set<Entry<PersonUtil, String>> entries = map.entrySet();
-		for (Entry<PersonUtil, String> entry : entries) {
-			System.out.println(entry.getKey().toString()+":"+entry.getValue());
-		}
+//		Set<Entry<PersonUtil, String>> entries = treeMap.entrySet();
+//		for (Entry<PersonUtil, String> entry : entries) {
+//			System.out.println(entry.getKey().toString()+":"+entry.getValue());
+//		}
 		
-		System.out.println(hashSet.add(p1));
-		System.out.println(hashSet.add(p2));
-		System.out.println(hashSet.add(p3));
-		
+//		System.out.println(hashSet.add(p1));
+//		System.out.println(hashSet.add(p2));
+//		System.out.println(hashSet.add(p3));
+//		
 		set.add(p1);
 		set.add(p2);
 		set.add(p3);
-		
+//		
 		for (PersonUtil element : set) {
-			System.out.println(element.toString());
+		System.out.println(element.toString());
 		}
 	}
 	public static void main(String[] args) {
@@ -95,8 +97,8 @@ class PersonUtil implements Comparable<PersonUtil>{
 	}
 	
 	public int hashCode() {
-		return 0;
-		//return HashCodeBuilder.reflectionHashCode(this);
+		//return 0;
+		return HashCodeBuilder.reflectionHashCode(this)+RandomUtils.nextInt();
 	}
 	public boolean equals(Object obj) {
 		return this.name.equalsIgnoreCase(((PersonUtil)obj).name);

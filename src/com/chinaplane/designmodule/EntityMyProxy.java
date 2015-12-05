@@ -14,14 +14,21 @@ public class EntityMyProxy implements InvocationHandler {
 	
 	public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
 		System.out.println("before");
-		Object obj = method.invoke(object, args);
+		 EntityInterfaceImpl entity = new EntityInterfaceImpl();
+		Object obj = method.invoke(entity, args);
 		System.out.println("End");
 		return obj;
 	}
+	
+	public static EntityInterface getInterface(){
+	    EntityInterface entityInterface = (EntityInterface)Proxy.newProxyInstance(EntityMyProxy.class.getClassLoader(), new Class []{EntityInterface.class}, new EntityMyProxy(null));
+        return entityInterface;
+	}
+	private class zhou{
+	    private String ss ="";
+	}
 	 public static void main(String[] args) {
-		 EntityInterfaceImpl entity = new EntityInterfaceImpl();
-		 EntityInterface entityInterface = (EntityInterface)Proxy.newProxyInstance(entity.getClass().getClassLoader(), entity.getClass().getInterfaces(), new EntityMyProxy(entity));
-		 System.out.println(entityInterface.getInteger());
+		 System.out.println(getInterface().getInteger());
 	}
 
 }
