@@ -24,7 +24,6 @@ public class Master {
 			threads.put(Integer.toString(i),new Thread(work,Integer.toString(i)));
 			
 		}
-		System.out.println();
 	}
 	public boolean isCompleted(){
 		for( Map.Entry<String, Thread>  entry: threads.entrySet()){
