@@ -72,12 +72,12 @@ public class GuavaTest {
         conList.add("d");
 
         // [6]
-        ArrayList<Entity> imumuList = new ArrayList<Entity>();
-        imumuList.add(new Entity("zhou"));
+        ArrayList<HEntity> imumuList = new ArrayList<HEntity>();
+       // imumuList.add(new HEntity("zhou"));
         List<String> googleImmu = ImmutableList.of("ad");
         List<String> optionIds = ImmutableList.copyOf(new String[] {"a", "b"});
-        List<Entity> optionIds5 = ImmutableList.copyOf(imumuList);
-        Entity entity = optionIds5.iterator().next();
+        List<HEntity> optionIds5 = ImmutableList.copyOf(imumuList);
+        HEntity entity = optionIds5.iterator().next();
         System.out.println(entity.name);
         entity.name = "lengjing";
         System.out.println(optionIds5.iterator().next().name);
@@ -322,11 +322,11 @@ class My extends Ordering<entity>{
     }
     
 }
-class Entity {
+class HEntity {
 
     public String name;
 
-    public Entity(String str) {
+    public HEntity(String str) {
         this.name = str;
     }
 }
